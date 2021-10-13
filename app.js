@@ -188,14 +188,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
         for (let i = 0; i < squares.length; i++) {
             if (squares[i].innerHTML == 2048) {
                 resultDisplay.innerHTML = "You win";
-                document.removeEventListener('keyup',control);
+                document.removeEventListener('keyup', control);
             }
         }
     };
 
 
     const checkForGameOver = () => {
-      let zeros = 0;
+        let zeros = 0;
         for (let i = 0; i < squares.length; i++) {
             if (squares[i].innerHTML == 0) {
                 zeros++;
@@ -203,7 +203,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         }
         if (zeros === 0) {
             resultDisplay.innerHTML = 'You Lose!';
-            document.removeEventListener('keyup',control);
+            document.removeEventListener('keyup', control);
         }
     };
 
